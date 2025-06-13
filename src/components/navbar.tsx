@@ -68,9 +68,9 @@ export default function Navbar() {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-30 p-2 shadow">
-                        <li><Link href="/" className="hover:shadow-2xl shadow-sky-500">Home</Link></li>
-                        <li><Link href="/about" className="hover:shadow-2xl shadow-sky-500">Adout</Link></li>
-                        <li><Link href="/contactus" className="hover:shadow-2xl shadow-sky-500">contact us</Link></li>
+                        <li><Link href="/" className="hover:shadow-xl shadow-sky-500">Home</Link></li>
+                        <li><Link href="/about" className="hover:shadow-xl shadow-sky-500">Adout</Link></li>
+                        <li><Link href="/contactus" className="hover:shadow-xl shadow-sky-500">contact us</Link></li>
                     </ul>
                 </div>
                 <Link href='/' className="flex justify-center items-center gap-2 text-xl w-auto p-2">
@@ -80,9 +80,9 @@ export default function Navbar() {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><Link href="/" className="hover:shadow-2xl shadow-sky-500">Home</Link></li>
-                    <li><Link href="/about" className="hover:shadow-2xl shadow-sky-500">Adout</Link></li>
-                    <li><Link href="/contactus" className="hover:shadow-2xl shadow-sky-500">Contact us</Link></li>
+                    <li><Link href="/" className="hover:shadow-xl shadow-sky-500">Home</Link></li>
+                    <li><Link href="/about" className="hover:shadow-xl shadow-sky-500">Adout</Link></li>
+                    <li><Link href="/contactus" className="hover:shadow-xl shadow-sky-500">Contact us</Link></li>
                 </ul>
             </div>
             <div className="navbar-end">
@@ -90,7 +90,7 @@ export default function Navbar() {
                     <ThemeControl />
                 </div>
                 {!isLoggedIn ? (
-                    <div className="dropdown dropdown-end hover:shadow-2xl shadow-sky-500">
+                    <div className="dropdown dropdown-end hover:shadow-xl shadow-sky-500">
                         <div tabIndex={0} role="button" className="btn btn-ghost">Login</div>
                         <ul
                             tabIndex={0}
@@ -106,7 +106,7 @@ export default function Navbar() {
                         <div className="flex gap-1">
 
                             <ProfileCard userData={userData} />
-                            <button className='hidden sm:block btn btn-ghost hover:shadow-2xl shadow-sky-500'>
+                            <button className='hidden sm:block btn btn-ghost hover:shadow-xl shadow-sky-500'>
                                 <Link href="/" onClick={notify} className=''>
                                     Logout
                                 </Link>

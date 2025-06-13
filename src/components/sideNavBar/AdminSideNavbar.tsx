@@ -77,7 +77,7 @@ export default function AdminSideNavbar() {
         <div className="text-sm">
             {menuItems.map((i) => (
                 <div className="flex flex-col gap-1" key={i.title}>
-                    <Link href={i.titleHref} className="btn btn-ghost btn-outline hover:shadow-2xl shadow-sky-500 text-lg">
+                    <Link href={i.titleHref} className="btn btn-ghost btn-outline hover:shadow-xl shadow-sky-500 text-lg">
                         <span>
                             {i.titleIcon}
                         </span>

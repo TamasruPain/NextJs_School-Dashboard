@@ -50,7 +50,7 @@ export default function ProfileCard({ userData }: ProfileDeatails) {
     return (
         <div>
             {/* The button to open modal */}
-            <label htmlFor="my_modal_7" className="btn btn-ghost hover:shadow-2xl shadow-sky-500 ">
+            <label htmlFor="my_modal_7" className="btn btn-ghost hover:shadow-xl shadow-sky-500 ">
                 <FontAwesomeIcon icon={faUserAstronaut} style={{ color: "#B197FC", }} />
                 {user ? `${user}` : "Profile"}
                 {""}

@@ -31,7 +31,7 @@ export default function RootLayout({
 
                  <div className="flex flex-col w-[85%] sm:w-[92%] md:w-[92%] lg:w-[84%] xl:w-[86%]"
                     style={{
-                        backgroundImage: "url('/images/3000WP.jpg')",
+                        backgroundImage: "url('/images/birds02.png')",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                     }}

@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function AdminDashboardHeader() {
     
     return (
-        <div className="flex">
+        <div className="flex mt-2">
             <div className="w-[55%] sm:w-[80%] md:w-[80%] lg:w-[80%] xl:w-[90%] p-2">
                 <h1 className="text-2xl mx-2 mt-2 font-bold">
                     Admin Dashboard

@@ -29,7 +29,7 @@ export default function ViewAnnoucements() {
         <div className="">
             <div className="p-2 m-3">
                 <h1 className="text-2xl p-2">
-                    <FontAwesomeIcon icon={faBullhorn} /> Announcment Management
+                    <FontAwesomeIcon icon={faBullhorn} /> Announcments 
                 </h1>
 
                 <div className="">
@@ -52,15 +52,15 @@ export default function ViewAnnoucements() {
                 </div>
             </div>
 
-            <div className="p-4 mt-4">
-                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 h-screen overflow-scroll rounded-xl">
+            <div className="p-4 mt-4 ">
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 h-screen overflow-scroll rounded-xl backdrop-blur-lg p-5">
                     {filteredAnnoucement.map(e => (
-                        <div className="bg-base-100 p-3 card hover:shadow shadow-blue-500" key={e.id}>
+                        <div className="bg-base-300 p-3 card hover:shadow shadow-blue-500" key={e.id}>
                             <div className="flex items-center justify-between my-1">
                                 <h1>{e.title}</h1>
-                                <span className="text-zinc-300">{e.time}</span>
+                                <span className="text-gray-500">{e.time}</span>
                             </div>
-                            <p className="text-zinc-400">{e.description}</p>
+                            <p className="text-sm text-gray-400">{e.description}</p>
                             <div className="flex items-end justify-end">
                                 <a href="#my_modal_8" className="btn btn-soft btn-primary mx-2 my-1">
                                     <FontAwesomeIcon icon={faEye} /> View

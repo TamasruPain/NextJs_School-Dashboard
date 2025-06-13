@@ -22,7 +22,7 @@ export default function AdminDashboardPage() {
             {/* userCards, Rightside bar */}
             {/* ---------------------------------------------------------------------------- */}
             <div className="flex backdrop-blur-sm bg-black/10 rounded-2xl shadow-lg p-2 mt-2">
-                <div className="flex flex-col rounded-2xl gap-5 m-2 
+                <div className="flex flex-col gap-5 m-2 
                     w-full sm:w-[60%] md:w-[60%] lg:w-[70%] xl:w-[80%]">
                     {/* user Card */}
                     <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 
@@ -34,11 +34,13 @@ export default function AdminDashboardPage() {
                         <UsersCard type="Staff Members" count={100} />
                     </div>
                     {/* charts */}
-                    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 
-                                        gap-5
-                                        ">
-                        <CountChart />
-                        <AttandanceChart />
+                    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-5 p-1">
+                        <div className="xl:w-[100%]">
+                            <CountChart />
+                        </div>
+                        <div className="xl:w-[185%]">
+                            <AttandanceChart />
+                        </div>
                     </div>
                     <div className="hidden lg:block xl:block ">
                         <TeachersCard urlData={LocalTeacherDataUrl} />

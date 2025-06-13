@@ -18,13 +18,13 @@ export default function TeacherClassesCard({ urlData }: { urlData: string }) {
 
     return (
 
-        <div className="bg-zinc-800 p-2 rounded-md hover:shadow-lg shadow-sky-200 sm:w-[100%] md:w-[100%] lg:w-[100%] xl:w-[110%]">
+        <div className="bg-base-300 p-2 rounded-md hover:shadow-lg shadow-sky-200">
 
             <div className="p-2">
                 <h1>
                     <FontAwesomeIcon icon={faChalkboard} /> Classes
                     <Link href={urlData} className="float-end">
-                        <span className="float-end underline">All Classes {">>"}</span>
+                        <span className="float-end underline">more {">>"}</span>
                     </Link>
                 </h1>
             </div>
@@ -34,9 +34,9 @@ export default function TeacherClassesCard({ urlData }: { urlData: string }) {
                     <div className="bg-base-100 p-3 card hover:shadow shadow-blue-500" key={classses.id}>
                         <div className="flex items-center justify-between my-1">
                             <h1>{classses.title}</h1>
-                            <span className="text-zinc-300">{classses.time}</span>
+                            <span className="text-gray-500">{classses.time}</span>
                         </div>
-                        <p className="text-zinc-400">{classses.description}</p>
+                        <p className="text-sm text-gray-400">{classses.description}</p>
                     </div>
                 ))}
             </div>

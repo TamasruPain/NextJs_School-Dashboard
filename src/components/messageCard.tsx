@@ -19,8 +19,7 @@ export default function MessageCard({ urlData }: { urlData: string }) {
     return (
 
 
-        <div className="bg-zinc-800 p-2 rounded-md hover:shadow-lg shadow-sky-200 
-                            sm:w-[100%] md:w-[100%] lg:w-[100%] xl:w-[188%]">
+        <div className="bg-base-300 p-2 rounded-md hover:shadow-lg shadow-sky-200">
 
             <div className="p-2">
                 <h1>
@@ -40,9 +39,9 @@ export default function MessageCard({ urlData }: { urlData: string }) {
                     <div className="bg-base-100 p-3 card hover:shadow shadow-blue-500 hidden md:block" key={messages.id}>
                         <div className="flex items-center justify-between my-1">
                             <h1>{messages.title}</h1>
-                            <span className="text-zinc-300">{messages.time}</span>
+                            <span className="text-gray-500">{messages.time}</span>
                         </div>
-                        <p className="text-zinc-400">{messages.description}</p>
+                        <p className="text-sm text-gray-400">{messages.description}</p>
                     </div>
                 ))}
             </div>

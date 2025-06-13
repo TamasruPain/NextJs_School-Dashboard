@@ -55,15 +55,15 @@ export default function ManageMessages() {
 
                 {/* Message List */}
                 <div className="p-2 mt-4">
-                    <div className="flex flex-col gap-4 h-screen overflow-scroll rounded-xl">
+                    <div className="flex flex-col gap-4 h-screen overflow-scroll rounded-xl backdrop-blur-xl p-4">
                         {filteredMassages.map(e => (
-                            <div className="bg-base-100 p-3 card hover:shadow shadow-blue-500" key={e.id}>
+                            <div className="bg-base-300 p-3 card hover:shadow shadow-blue-500" key={e.id}>
                                 <div className="flex items-center justify-between">
                                     <h1>{e.title}</h1>
-                                    <span className="text-zinc-300 mb-3">{e.time}</span>
+                                    <span className="text-gray-500 mb-3">{e.time}</span>
                                 </div>
                                 <div className="flex items-center justify-between">
-                                    <p className="text-zinc-400 mb-3">{e.description}</p>
+                                    <p className="text-gray-400 mb-3">{e.description}</p>
                                     <div className=" items-end justify-end mt-3">
                                         <button className="btn btn-soft btn-primary mx-1 my-1 ml-5.5">
                                             <FontAwesomeIcon icon={faEye} />

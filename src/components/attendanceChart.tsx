@@ -42,8 +42,8 @@ const chartConfig = {
 export default function AttandanceChart() {
     return (
 
-        <div className="w-full xl:w-[100%]">
-            <Card className="hover:shadow-xl shadow-sky-200 bg-base-200 ">
+        <div className="w-full ">
+            <Card className="hover:shadow-md shadow-sky-200 bg-base-200 ">
                 <CardHeader>
                     <CardTitle>Attendance</CardTitle>
                     <CardDescription>January - June 2024</CardDescription>

@@ -69,7 +69,7 @@ export default function AnnouncementsCard({ urlData }: { urlData: string }) {
                             <h1>{events.title}</h1>
                             <span className="text-gray-500">{events.time}</span>
                         </div>
-                        <p className="text-gray-600">{events.description}</p>
+                        <p className="text-gray-400">{events.description}</p>
                     </div>
                 ))}
             </div>

@@ -55,16 +55,15 @@ export default function ParentOTPForm() {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen"
-            style={{
-                backgroundImage: "url('/images/5483844.jpg')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-            }}
-        >
+        <div className="flex flex-col items-center justify-center gap-5">
+            <ul className="steps">
+                <li className="step step-primary">Email Verify</li>
+                <li className="step step-primary">OTP Verify</li>
+                <li className="step">Set password</li>
+            </ul>
 
             {/* otp form */}
-            <div className="backdrop-blur-xl font-bold text-black rounded-box w-xs hover:shadow-md shadow-sky-400 p-6">
+            <div className="backdrop-blur-xl rounded-box hover:shadow-md shadow-sky-400 p-6">
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                         <div className="mb-6">
@@ -73,7 +72,7 @@ export default function ParentOTPForm() {
                             </h1>
                         </div>
                         <div className="mt-3">
-                            <span className="text-sm text-gray-600 ">
+                            <span className="text-sm">
                                 Please enter the OTP sent to your email.
                             </span>
                         </div>
@@ -103,7 +102,7 @@ export default function ParentOTPForm() {
                             )}
                         />
                         <progress className="progress progress-primary" value={progress} max="100"></progress>
-                        <Link href={"/parent-passwordForm"} className="btn btn-outline btn-ghost w-full" type="submit">Submit</Link>
+                        <Link href={"/parent-passwordForm"} className="btn btn-outline btn-ghost hover:shadow-md shadow-green-500 w-full" type="submit">Submit</Link>
                     </form>
                 </Form>
 

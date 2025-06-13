@@ -20,32 +20,29 @@ export default function TeacherEmailForm() {
     }, [email]);
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen"
-            style={{
-                backgroundImage: "url('/images/5483827.jpg')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-            }}
-        >
-            {/* Progress bar */}
+        <div className="flex flex-col justify-center items-center gap-5">
+            <ul className="steps">
+                <li className="step step-primary">Email Verify</li>
+                <li className="step">OTP Verify</li>
+                <li className="step">Set password</li>
+            </ul>
 
-            <div className="backdrop-blur-xl font-bold text-black rounded-box w-xs hover:shadow-md shadow-sky-400">
+            <div className="backdrop-blur-xl rounded-box hover:shadow-md shadow-sky-400">
 
                 {/* Email form  */}
-                <fieldset className="fieldset p-6">
+                <fieldset className="fieldset p-6 w-70">
                     <h1 className=" text-2xl">Verify Your Email</h1>
                     <label className="label  mt-10">Email</label>
-                    <input className="input validator" type="email" required placeholder="mail@site.com"
-                        style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}
+                    <input className="input validator bg-black/10" type="email" required placeholder="mail@site.com"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
                     <progress className="progress progress-primary" value={progress} max="100"></progress>
                     <div className="validator-hint">Enter valid email address</div>
-                    <Link href={"/teacher-OTPForm"} className="btn btn-outline btn-ghost mt-5" type="submit">Submit</Link>
+                    <Link href={"/teacher-OTPForm"} className="btn btn-outline btn-ghost mt-5 hover:shadow-md shadow-green-500" type="submit">Submit</Link>
                     <div className="flex items-center justify-center mt-5">
                         <p>Already have an account?{" "}
-                            <Link href={"/teacher-login"} className="btn-link">
+                            <Link href={"/teacher-login"} className="text-sky-600">
                                 Login
                             </Link>
                         </p>

@@ -49,7 +49,7 @@ export default function AnnouncementsCard({ urlData }: { urlData: string }) {
     return (
 
 
-        <div className="bg-zinc-700 p-2 rounded-md hover:shadow-lg shadow-sky-200">
+        <div className="bg-base-300 p-2 rounded-md hover:shadow-md shadow-sky-200">
 
             <div className="p-1">
                 <h1>
@@ -67,9 +67,9 @@ export default function AnnouncementsCard({ urlData }: { urlData: string }) {
                     <div className="bg-base-100 p-3 card hover:shadow shadow-blue-500 hidden md:block" key={events.id}>
                         <div className="flex items-center justify-between my-1">
                             <h1>{events.title}</h1>
-                            <span className="text-zinc-300">{events.time}</span>
+                            <span className="text-gray-500">{events.time}</span>
                         </div>
-                        <p className="text-zinc-400">{events.description}</p>
+                        <p className="text-gray-600">{events.description}</p>
                     </div>
                 ))}
             </div>

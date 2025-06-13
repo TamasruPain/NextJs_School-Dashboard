@@ -60,7 +60,7 @@ export default function StudentSideNavbar() {
                     </Link>
                     {i.items.map((item) => (
                         <Link href={item.href} key={item.label}
-                            className="flex items-center justify-center lg:justify-start gap-2 py-2 
+                            className="flex items-center justify-center lg:justify-start gap-2
                         hover:shadow-2xl shadow-sky-500
                         btn btn-ghost
                         ">

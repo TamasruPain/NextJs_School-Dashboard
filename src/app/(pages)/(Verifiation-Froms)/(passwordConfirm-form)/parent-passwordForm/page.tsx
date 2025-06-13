@@ -30,53 +30,31 @@ export default function ParentPasswordForm() {
 
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen"
-            style={{
-                backgroundImage: "url('/images/5483844.jpg')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-            }}
-        >
-
-            <div className="backdrop-blur-xl font-bold text-black rounded-box w-xs hover:shadow-md shadow-sky-400">
-
+        <div className="flex flex-col items-center justify-center gap-5">
+            <ul className="steps">
+                <li className="step step-primary">Email Verify</li>
+                <li className="step step-primary">OTP Verify</li>
+                <li className="step step-primary">Set password</li>
+            </ul>
+            <div className="backdrop-blur-xl rounded-box hover:shadow-md shadow-sky-400">
                 {/* passwordfiled form */}
-                <fieldset className="fieldset p-5">
+                <fieldset className="fieldset p-5 w-70">
                     <h1 className="text-2xl">Set Password</h1>
 
                     <label className="label mt-5">Enter Password</label>
-                    <input type="password" className="input validator" required placeholder="Password" minLength={8}
-                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                        title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
-                        style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}
+                    <input type="password" className="input validator bg-black/10" required placeholder="Password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
                     <progress className="progress progress-primary" value={progressOne} max="100"></progress>
-                    <p className="validator-hint">
-                        Must be more than 8 characters, including
-                        <br />At least one number
-                        <br />At least one lowercase letter
-                        <br />At least one uppercase letter
-                    </p>
 
                     <label className="label">Confirm Password</label>
-                    <input type="password" className="input validator" required placeholder="Password" minLength={8}
-                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                        title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
-                        style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}
+                    <input type="password" className="input validator bg-black/10" required placeholder="Password"
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     />
                     <progress className="progress progress-primary" value={progressTwo} max="100"></progress>
-                    <p className="validator-hint">
-                        Must be more than 8 characters, including
-                        <br />At least one number
-                        <br />At least one lowercase letter
-                        <br />At least one uppercase letter
-                    </p>
-
-                    <Link href={"/parent-login"} className="btn btn-ghost btn-outline mt-4">Submit</Link>
+                    <Link href={"/parent-login"} className="btn btn-ghost btn-outline mt-5 mb-5 hover:shadow-md shadow-green-500">Submit</Link>
                 </fieldset>
             </div>
         </div>

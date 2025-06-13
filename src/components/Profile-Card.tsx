@@ -59,9 +59,8 @@ export default function ProfileCard({ userData }: ProfileDeatails) {
             <input type="checkbox" id="my_modal_7" className="modal-toggle" />
             <div className="modal" role="dialog">
                 <div className="modal-box flex flex-col gap-6">
-
-                    <div className="flex items-center justify-center gap-6">
-                        <div className="flex flex-col items-center justify-center gap-2 outline rounded-xl p-5">
+                    <div className="flex items-center justify-center">
+                        <div className="flex flex-col items-center justify-center gap-2 outline rounded-xl p-5 ml-5">
                             <div className="text-5xl">
                                 <FontAwesomeIcon icon={faUserAstronaut} style={{ color: "#B197FC", }} />
                             </div>

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
 import ProfileCard from '@/components/Profile-Card';
+import ThemeControl from './Theme-Control';
 
 
 export default function Navbar() {
@@ -58,7 +59,7 @@ export default function Navbar() {
 
 
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-base-200 shadow-sm">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -68,7 +69,7 @@ export default function Navbar() {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-30 p-2 shadow">
                         <li><Link href="/" className="hover:shadow-2xl shadow-sky-500">Home</Link></li>
-                        <li><Link href="/about" className="hover:shadow-2xl shadow-sky-500">adout</Link></li>
+                        <li><Link href="/about" className="hover:shadow-2xl shadow-sky-500">Adout</Link></li>
                         <li><Link href="/contactus" className="hover:shadow-2xl shadow-sky-500">contact us</Link></li>
                     </ul>
                 </div>
@@ -80,15 +81,17 @@ export default function Navbar() {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><Link href="/" className="hover:shadow-2xl shadow-sky-500">Home</Link></li>
-                    <li><Link href="/about" className="hover:shadow-2xl shadow-sky-500">adout</Link></li>
+                    <li><Link href="/about" className="hover:shadow-2xl shadow-sky-500">Adout</Link></li>
                     <li><Link href="/contactus" className="hover:shadow-2xl shadow-sky-500">Contact us</Link></li>
                 </ul>
             </div>
-
             <div className="navbar-end">
+                <div className='mx-2'>
+                    <ThemeControl />
+                </div>
                 {!isLoggedIn ? (
-                    <div className="dropdown dropdown-end hover:shadow-2xl shadow-sky-500 mx-2">
-                        <div tabIndex={0} role="button" className="btn btn-ghost">Login / Sign up</div>
+                    <div className="dropdown dropdown-end hover:shadow-2xl shadow-sky-500">
+                        <div tabIndex={0} role="button" className="btn btn-ghost">Login</div>
                         <ul
                             tabIndex={0}
                             className="menu dropdown-content bg-base-200 rounded-box z-1 mt-4 w-34 p-2 shadow-sm">
@@ -100,15 +103,15 @@ export default function Navbar() {
                     </div>
                 ) : (
                     <>
-                        <div className="flex gap-2">
+                        <div className="flex gap-1">
 
                             <ProfileCard userData={userData} />
-
-                            <label className="btn btn-ghost hover:shadow-2xl shadow-sky-500 ">
-                                <Link href="/" onClick={notify}>
+                            <button className='hidden sm:block btn btn-ghost hover:shadow-2xl shadow-sky-500'>
+                                <Link href="/" onClick={notify} className=''>
                                     Logout
                                 </Link>
-                            </label>
+                            </button>
+
                         </div>
                     </>
                 )}

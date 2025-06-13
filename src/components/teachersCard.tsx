@@ -45,9 +45,9 @@ const events = [
 
 export default function TeachersCard({ urlData }: { urlData: string }) {
     return (
-        <div className=" sm:w-full md:w-[186%] lg:w-[250%] xl:w-[300%]">
+        <div className="">
 
-            <div className="bg-zinc-700 p-2 rounded-md hover:shadow-lg shadow-sky-200">
+            <div className="bg-base-300 p-2 rounded-md hover:shadow-lg shadow-sky-200">
 
                 <div className="p-2">
                     <h1>
@@ -62,8 +62,8 @@ export default function TeachersCard({ urlData }: { urlData: string }) {
                 ">
                     {events.slice(0, 6).map(events => (
                         <div className="bg-base-100 card hover:shadow shadow-blue-500" key={events.id}>
-                            <div>
-                                <span className="text-zinc-300 float-end">{events.status}</span>
+                            <div className="">
+                                <span className="text-gray-500 float-end mt-1 mr-2">{events.status}</span>
                             </div>
                             <div className="flex gap-2 mb-5 ml-4">
                                 <div>
@@ -71,7 +71,7 @@ export default function TeachersCard({ urlData }: { urlData: string }) {
                                 </div>
                                 <div className="my-1.5">
                                     <label className="card-title">{events.title}</label>
-                                    <p className="text-zinc-400">{events.description}</p>
+                                    <p className="">{events.description}</p>
                                 </div>
                             </div>
                         </div>

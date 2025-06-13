@@ -54,16 +54,14 @@ export default function teacherOTPForm() {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen"
-            style={{
-                backgroundImage: "url('/images/5483827.jpg')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-            }}
-        >
-
+        <div className="flex flex-col items-center justify-center gap-5">
+            <ul className="steps">
+                <li className="step step-primary">Email Verify</li>
+                <li className="step step-primary">OTP Verify</li>
+                <li className="step">Set password</li>
+            </ul>
             {/* otp form */}
-            <div className="backdrop-blur-xl font-bold text-black rounded-box w-xs hover:shadow-md shadow-sky-400 p-6">
+            <div className="backdrop-blur-xl rounded-box hover:shadow-md shadow-sky-400 p-6">
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                         <div className="mb-6">
@@ -72,7 +70,7 @@ export default function teacherOTPForm() {
                             </h1>
                         </div>
                         <div className="mt-3">
-                            <span className="text-sm text-gray-600 ">
+                            <span className="text-sm">
                                 Please enter the OTP sent to your email.
                             </span>
                         </div>
@@ -81,7 +79,7 @@ export default function teacherOTPForm() {
                             name="pin"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>One-Time Password</FormLabel>
+
                                     <FormControl>
                                         <InputOTP maxLength={6} {...field}>
                                             <InputOTPGroup>
@@ -102,7 +100,7 @@ export default function teacherOTPForm() {
                             )}
                         />
                         <progress className="progress progress-primary" value={progress} max="100"></progress>
-                        <Link href={"/teacher-passwordForm"} className="btn btn-outline btn-ghost w-full" type="submit">Submit</Link>
+                        <Link href={"/teacher-passwordForm"} className="btn btn-outline btn-ghost w-full hover:shadow-md shadow-green-500" type="submit">Submit</Link>
                     </form>
                 </Form>
             </div>

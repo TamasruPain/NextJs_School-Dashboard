@@ -24,12 +24,12 @@ export default function RootLayout({
             <Navbar />
             <div className="flex">
                 {/* left side */}
-                <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] bg-base-200 p-4">
+                <div className="w-[15%] sm:w-[8%] md:w-[8%] lg:w-[16%] xl:w-[14%] bg-base-200 p-2">
                     <ParentSideNavbar />
                 </div>
                 {/* Right side */}
 
-                <div className="flex flex-col w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%]"
+                 <div className="flex flex-col w-[85%] sm:w-[92%] md:w-[92%] lg:w-[84%] xl:w-[86%]"
                     style={{
                         backgroundImage: "url('/images/3000WP.jpg')",
                         backgroundSize: "cover",

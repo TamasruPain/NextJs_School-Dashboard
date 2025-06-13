@@ -47,8 +47,8 @@ export default function CountChart() {
   }, []);
 
   return (
-    <div className="sm:w-full md:w-full lg:w-[99%] xl:w-[110%]">
-      <Card className="flex flex-col hover:shadow-2xl shadow-sky-200 bg-zinc-800">
+    <div className="w-full xl:w-[70%]">
+      <Card className="flex flex-col hover:shadow-md shadow-sky-200 bg-base-200">
         <CardHeader className="items-center pb-0">
           <CardTitle>Students</CardTitle>
           <CardDescription>January - June 2025</CardDescription>
@@ -81,19 +81,19 @@ export default function CountChart() {
                           y={viewBox.cy}
                           textAnchor="middle"
                           dominantBaseline="middle"
-                          className="text-white"
+                          
                         >
                           <tspan
                             x={viewBox.cx}
                             y={viewBox.cy}
-                            className="text-white text-3xl font-bold"
+                            className=" text-3xl font-bold"
                           >
                             {totalVisitors.toLocaleString()}
                           </tspan>
                           <tspan
                             x={viewBox.cx}
                             y={(viewBox.cy || 0) + 24}
-                            className="text-white"
+                            className="text-md"
                           >
                             Students
                           </tspan>
@@ -108,7 +108,7 @@ export default function CountChart() {
           </ChartContainer>
         </CardContent>
         <CardFooter className="flex-col gap-2 text-sm">
-          <div className="flex gap-5 mt-1 mb-2">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5 mt-1 mb-2">
             <div className="flex border border-sky-500 rounded gap-4 p-2 w-full">
               <FontAwesomeIcon
                 icon={faChild}

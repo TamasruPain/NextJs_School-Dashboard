@@ -39,7 +39,7 @@ export default function ManageExams() {
                     <div className="flex items-center justify-center mt-5 gap-3">
                         <input
                             type="search"
-                            className="input bg-zinc-700 text-white placeholder:text-gray-400 hover:shadow-md shadow-sky-400 w-64 p-2 rounded"
+                            className="input placeholder:text-gray-400 hover:shadow-md shadow-sky-400 w-64 p-2 rounded"
                             placeholder="🔍 Search by Subject"
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}

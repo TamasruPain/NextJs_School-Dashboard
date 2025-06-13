@@ -42,7 +42,7 @@ export default function ManageAnnoucements() {
                     <div className="flex items-center justify-center mt-2 gap-3">
                         <input
                             type="search"
-                            className="input bg-zinc-700 text-white placeholder:text-gray-400 hover:shadow-md shadow-sky-400 w-64 p-2 rounded"
+                            className="input placeholder:text-gray-400 hover:shadow-md shadow-sky-400 w-64 p-2 rounded"
                             placeholder="🔍 Search by Name"
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
@@ -90,7 +90,7 @@ export default function ManageAnnoucements() {
 
             {/* list of announcement */}
             <div className="p-4 mt-4">
-                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 h-screen overflow-scroll rounded-xl">
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 p-4 h-screen overflow-scroll rounded-xl backdrop-blur-2xl">
                     {filteredAnnoucement.map(e => (
                         <div className="bg-base-100 p-3 card hover:shadow shadow-blue-500" key={e.id}>
                             <div className="flex items-center justify-between my-1">

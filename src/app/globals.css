@@ -1,11 +1,14 @@
 @import "tailwindcss";
-@plugin "daisyui";
+
+@plugin "daisyui" {
+    themes: light --default, dark --prefersdark, cupcake;
+}
 
 .react-calendar {
     width: auto !important;
     border: none !important;
     font-family: "Inter", sans-serif !important;
-    background-color: #2f4f4f !important;
+    background-color: #53a0a0 !important;
 
 }
 
@@ -24,7 +27,7 @@
 }
 
 .react-calendar__tile--disabled {
-    color: #9ca3af !important;
+    color: #accbff !important;
     /* gray-400 */
 }
 
@@ -36,7 +39,7 @@
 }
 
 .react-calendar__month-view__days__day--weekend {
-    color: #f87171 !important;
+    color: #fc8989 !important;
     /* red-400, or use gray if you want to mute them more */
 }
 

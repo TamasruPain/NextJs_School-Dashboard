@@ -86,14 +86,14 @@ export default function AdminSideNavbar() {
                         </span>
                     </Link>
                     {i.items.map((item) => (
-                        <Link href={item.href} key={item.label}
-                            className="flex items-center justify-center lg:justify-start gap-2 py-2 
+                            <Link href={item.href} key={item.label}
+                                className="flex items-center justify-center lg:justify-start gap-2 
                             hover:shadow-2xl shadow-sky-500
                             btn btn-ghost
                             ">
-                            <div>{item.icon}</div>
-                            <span className="hidden lg:block">{item.label}</span>
-                        </Link>
+                                <div>{item.icon}</div>
+                                <span className="hidden lg:block">{item.label}</span>
+                            </Link>
                     ))}
                 </div>
 

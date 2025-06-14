@@ -58,8 +58,8 @@ export default function ManageMessages() {
                 </div>
 
                 {/* Message List */}
-                <div className="p-2 mt-4 backdrop-blur-2xl">
-                    <div className="flex flex-col gap-4 h-screen overflow-scroll rounded-xl">
+                <div className="p-6 mt-4 rounded-xl backdrop-blur-sm bg-black/10">
+                    <div className="flex flex-col gap-4 h-screen overflow-scroll ">
                         {filteredMassages.map(e => (
                             <div className="bg-base-100 p-3 card hover:shadow shadow-blue-500" key={e.id}>
                                 <div className="flex items-center justify-between">

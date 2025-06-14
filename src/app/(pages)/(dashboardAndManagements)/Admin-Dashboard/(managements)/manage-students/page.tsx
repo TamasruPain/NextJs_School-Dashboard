@@ -52,81 +52,136 @@ export default function ManageStudents() {
                             Clear
                         </button>
                     </div>
-                    {/* add button */}
-                    <div className="flex items-center justify-between mt-4">
-                        <h1 className="text-lg ml-1">Students ( {students.length} )</h1>
-                        <a href="#my_modal_8" className="btn btn-soft mr-3">
-                            <FontAwesomeIcon icon={faSquarePlus} /> Add New Student
-                        </a>
-                        {/* Put this part before </body> tag */}
-                        <div className="modal" role="dialog" id="my_modal_8">
-                            <div className="modal-box">
-                                <div className="modal-action mt-1">
-                                    <a href="#" className="btn">close</a>
+
+                    {/* name of each tab group should be unique */}
+                    <div className="tabs tabs-lift">
+                        <input type="radio" name="my_tabs_3" className="tab [--tab-bg:rgba(1,1,1,0.1)]" aria-label="Students" defaultChecked />
+                        <div className="tab-content backdrop-blur-sm bg-black/10 p-4">
+
+                            {/* add button */}
+                            <div className="flex items-center justify-between mb-2 mr-2">
+                                <h1 className="text-lg ml-1">Students ( {students.length} )</h1>
+                                <a href="#my_modal_8" className="btn btn-soft mr-3">
+                                    <FontAwesomeIcon icon={faSquarePlus} /> Add New Student
+                                </a>
+                                {/* Put this part before </body> tag */}
+                                <div className="modal" role="dialog" id="my_modal_8">
+                                    <div className="modal-box">
+                                        <div className="modal-action mt-1">
+                                            <a href="#" className="btn">close</a>
+                                        </div>
+                                        <h3 className="text-lg font-bold">Hello!</h3>
+                                        <div className="">
+                                            <fieldset className="fieldset p-4">
+
+                                                <label className="label">Title</label>
+                                                <input type="text" className="input w-full" placeholder="My awesome page" />
+
+                                                <label className="label">Slug</label>
+                                                <input type="text" className="input w-full" placeholder="my-awesome-page" />
+
+                                                <label className="label">Author</label>
+                                                <input type="text" className="input w-full" placeholder="Name" />
+
+                                                <button className="btn btn-neutral mt-10">Submit</button>
+
+                                            </fieldset>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h3 className="text-lg font-bold">Hello!</h3>
-                                <div className="">
-                                    <fieldset className="fieldset p-4">
-
-                                        <label className="label">Title</label>
-                                        <input type="text" className="input w-full" placeholder="My awesome page" />
-
-                                        <label className="label">Slug</label>
-                                        <input type="text" className="input w-full" placeholder="my-awesome-page" />
-
-                                        <label className="label">Author</label>
-                                        <input type="text" className="input w-full" placeholder="Name" />
-
-                                        <button className="btn btn-neutral mt-10">Submit</button>
-
-                                    </fieldset>
+                            </div>
+                            {/* students table */}
+                            <div className="m-2 ">
+                                <div className="rounded-box h-screen overflow-scroll border border-base-content/5 bg-base-100">
+                                    <table className="table w-full">
+                                        {/* head */}
+                                        <thead className="sticky top-0 z-10 bg-base-200">
+                                            <tr>
+                                                <th></th>
+                                                <th>No.</th>
+                                                <th>Name</th>
+                                                <th>roll_no.</th>
+                                                <th>Class</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody >
+                                            {filteredStudents.map(student => (
+                                                <tr className="hover:bg-[rgba(255,255,255,0.1)]" key={student.id}>
+                                                    <td></td>
+                                                    <th>{student.id}</th>
+                                                    <td>{student.name}</td>
+                                                    <td>{student.roll_no}</td>
+                                                    <td>{student.class}</td>
+                                                    <td>
+                                                        <button className="btn btn-soft btn-primary mx-2 my-1">
+                                                            <FontAwesomeIcon icon={faEye} /> View
+                                                        </button>
+                                                        <button className="btn btn-soft btn-success mx-2 my-1">
+                                                            <FontAwesomeIcon icon={faPenToSquare} /> Edit
+                                                        </button>
+                                                        <button className="btn btn-soft btn-warning mx-2 my-1">
+                                                            <FontAwesomeIcon icon={faTrashCan} /> Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
+
+                        <input type="radio" name="my_tabs_3" className="tab [--tab-bg:rgba(1,1,1,0.1)]" aria-label="Applictions" />
+                        <div className="tab-content backdrop-blur-sm bg-black/10 p-4">
+
+                            {/* students table */}
+                            <div className="m-2">
+                                <div className="rounded-box h-screen overflow-scroll border border-base-content/5 bg-base-100">
+                                    <table className="table w-full">
+                                        {/* head */}
+                                        <thead className="sticky top-0 z-10 bg-base-200">
+                                            <tr>
+                                                <th></th>
+                                                <th>No.</th>
+                                                <th>Name</th>
+                                                <th>roll_no.</th>
+                                                <th>Class</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody >
+                                            {filteredStudents.map(student => (
+                                                <tr className="hover:bg-[rgba(255,255,255,0.1)]" key={student.id}>
+                                                    <td></td>
+                                                    <th>{student.id}</th>
+                                                    <td>{student.name}</td>
+                                                    <td>{student.roll_no}</td>
+                                                    <td>{student.class}</td>
+                                                    <td>
+                                                        <button className="btn btn-soft btn-primary mx-2 my-1">
+                                                            <FontAwesomeIcon icon={faEye} /> View
+                                                        </button>
+                                                        <button className="btn btn-soft btn-success mx-2 my-1">
+                                                            <FontAwesomeIcon icon={faPenToSquare} /> Edit
+                                                        </button>
+                                                        <button className="btn btn-soft btn-warning mx-2 my-1">
+                                                            <FontAwesomeIcon icon={faTrashCan} /> Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-            
-            {/* students table */}
-            <div className="m-4 ">
-                <div className="rounded-box h-screen overflow-scroll border border-base-content/5 bg-base-100">
-                    <table className="table w-full">
-                        {/* head */}
-                        <thead className="sticky top-0 z-10 bg-base-200">
-                            <tr>
-                                <th></th>
-                                <th>No.</th>
-                                <th>Name</th>
-                                <th>roll_no.</th>
-                                <th>Class</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody >
-                            {filteredStudents.map(student => (
-                                <tr className="hover:bg-[rgba(255,255,255,0.1)]" key={student.id}>
-                                    <td></td>
-                                    <th>{student.id}</th>
-                                    <td>{student.name}</td>
-                                    <td>{student.roll_no}</td>
-                                    <td>{student.class}</td>
-                                    <td>
-                                        <button className="btn btn-soft btn-primary mx-2 my-1">
-                                            <FontAwesomeIcon icon={faEye} /> View
-                                        </button>
-                                        <button className="btn btn-soft btn-success mx-2 my-1">
-                                            <FontAwesomeIcon icon={faPenToSquare} /> Edit
-                                        </button>
-                                        <button className="btn btn-soft btn-warning mx-2 my-1">
-                                            <FontAwesomeIcon icon={faTrashCan} /> Delete
-                                        </button>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+
+
         </div >
     )
 } 

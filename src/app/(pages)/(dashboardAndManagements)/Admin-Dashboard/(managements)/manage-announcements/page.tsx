@@ -90,7 +90,8 @@ export default function ManageAnnoucements() {
 
             {/* list of announcement */}
             <div className="p-4 mt-4">
-                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 p-4 h-screen overflow-scroll rounded-xl backdrop-blur-2xl">
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 p-4 h-screen overflow-scroll rounded-xl
+                 backdrop-blur-md bg-black/10">
                     {filteredAnnoucement.map(e => (
                         <div className="bg-base-200 p-3 card hover:shadow shadow-blue-500" key={e.id}>
                             <div className="flex items-center justify-between my-1">

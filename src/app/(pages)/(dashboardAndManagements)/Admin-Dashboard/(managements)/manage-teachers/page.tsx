@@ -28,7 +28,7 @@ export default function ManageTeachers() {
 
     return (
         <div className="">
-            <div className="p-2 m-3">
+            <div className="p-2 m-2">
                 <h1 className="text-2xl p-2">
                     <FontAwesomeIcon icon={faPersonChalkboard} /> Teachers Management
                 </h1>
@@ -49,34 +49,127 @@ export default function ManageTeachers() {
                             Clear
                         </button>
                     </div>
-                    {/* add button */}
-                    <div className="flex items-center justify-between mt-4">
-                        <h1 className="text-lg ml-1">Teachers ( {teachers.length} )</h1>
-                        <a href="#my_modal_8" className="btn btn-soft mr-3">
-                            <FontAwesomeIcon icon={faSquarePlus} /> Add New Teacher
-                        </a>
-                        {/* Put this part before </body> tag */}
-                        <div className="modal" role="dialog" id="my_modal_8">
-                            <div className="modal-box">
-                                <div className="modal-action mt-1">
-                                    <a href="#" className="btn">close</a>
+
+
+                    {/* name of each tab group should be unique */}
+                    <div className="tabs tabs-lift">
+                        {/* tab 1 */}
+                        <input type="radio" name="my_tabs_3" className="tab [--tab-bg:rgba(1,1,1,0.1)]" aria-label="Teachers" defaultChecked />
+                        <div className="tab-content backdrop-blur-sm bg-black/10 p-4">
+                            {/* add button */}
+                            <div className="flex items-center justify-between">
+                                <h1 className="text-lg ml-1">Teachers ( {teachers.length} )</h1>
+                                <a href="#my_modal_8" className="btn btn-soft mb-2 mr-3">
+                                    <FontAwesomeIcon icon={faSquarePlus} /> Add New Teacher
+                                </a>
+                                {/* Put this part before </body> tag */}
+                                <div className="modal" role="dialog" id="my_modal_8">
+                                    <div className="modal-box">
+                                        <div className="modal-action mt-1">
+                                            <a href="#" className="btn">close</a>
+                                        </div>
+                                        <h3 className="text-lg font-bold">Hello!</h3>
+                                        <div className="">
+                                            <fieldset className="fieldset p-4">
+
+                                                <label className="label">Title</label>
+                                                <input type="text" className="input w-full" placeholder="My awesome page" />
+
+                                                <label className="label">Slug</label>
+                                                <input type="text" className="input w-full" placeholder="my-awesome-page" />
+
+                                                <label className="label">Author</label>
+                                                <input type="text" className="input w-full" placeholder="Name" />
+
+                                                <button className="btn btn-neutral mt-10">Submit</button>
+
+                                            </fieldset>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h3 className="text-lg font-bold">Hello!</h3>
-                                <div className="">
-                                    <fieldset className="fieldset p-4">
-
-                                        <label className="label">Title</label>
-                                        <input type="text" className="input w-full" placeholder="My awesome page" />
-
-                                        <label className="label">Slug</label>
-                                        <input type="text" className="input w-full" placeholder="my-awesome-page" />
-
-                                        <label className="label">Author</label>
-                                        <input type="text" className="input w-full" placeholder="Name" />
-
-                                        <button className="btn btn-neutral mt-10">Submit</button>
-
-                                    </fieldset>
+                            </div>
+                            {/* Teacher Table */}
+                            <div className="m-2">
+                                <div className="rounded-box h-screen overflow-scroll border border-base-content/5 bg-base-100">
+                                    <table className="table w-full">
+                                        {/* head */}
+                                        <thead className="sticky top-0 z-10 bg-base-200">
+                                            <tr>
+                                                <th></th>
+                                                <th>No.</th>
+                                                <th>Name</th>
+                                                <th>Description</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {filteredteachers.map(teachers => (
+                                                <tr className="hover:bg-[rgba(255,255,255,0.1)]" key={teachers.id}>
+                                                    <td></td>
+                                                    <th>{teachers.id}</th>
+                                                    <td>{teachers.title}</td>
+                                                    <td>{teachers.description}</td>
+                                                    <td>{teachers.status}</td>
+                                                    <td>
+                                                        <button className="btn btn-soft btn-primary mx-2 my-1">
+                                                            <FontAwesomeIcon icon={faEye} /> View
+                                                        </button>
+                                                        <button className="btn btn-soft btn-success mx-2 my-1">
+                                                            <FontAwesomeIcon icon={faPenToSquare} /> Edit
+                                                        </button>
+                                                        <button className="btn btn-soft btn-warning mx-2 my-1">
+                                                            <FontAwesomeIcon icon={faTrashCan} /> Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        {/* tab 2 */}
+                        <input type="radio" name="my_tabs_3" className="tab  [--tab-bg:rgba(1,1,1,0.1)]" aria-label="Applications" />
+                        <div className="tab-content backdrop-blur-sm bg-black/10 p-4">
+                            {/* Teacher Table */}
+                            <div className="m-2">
+                                <div className="rounded-box h-screen overflow-scroll border border-base-content/5 bg-base-100">
+                                    <table className="table w-full">
+                                        {/* head */}
+                                        <thead className="sticky top-0 z-10 bg-base-200">
+                                            <tr>
+                                                <th></th>
+                                                <th>No.</th>
+                                                <th>Name</th>
+                                                <th>Description</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {filteredteachers.map(teachers => (
+                                                <tr className="hover:bg-[rgba(255,255,255,0.1)]" key={teachers.id}>
+                                                    <td></td>
+                                                    <th>{teachers.id}</th>
+                                                    <td>{teachers.title}</td>
+                                                    <td>{teachers.description}</td>
+                                                    <td>{teachers.status}</td>
+                                                    <td>
+                                                        <button className="btn btn-soft btn-primary mx-2 my-1">
+                                                            <FontAwesomeIcon icon={faEye} /> View
+                                                        </button>
+                                                        <button className="btn btn-soft btn-success mx-2 my-1">
+                                                            <FontAwesomeIcon icon={faPenToSquare} /> Edit
+                                                        </button>
+                                                        <button className="btn btn-soft btn-warning mx-2 my-1">
+                                                            <FontAwesomeIcon icon={faTrashCan} /> Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -84,46 +177,7 @@ export default function ManageTeachers() {
                 </div>
             </div>
 
-            {/* Teacher Table */}
-            <div className="m-4 ">
-                <div className="rounded-box h-screen overflow-scroll border border-base-content/5 bg-base-100">
-                    <table className="table w-full">
-                        {/* head */}
-                        <thead className="sticky top-0 z-10 bg-base-200">
-                            <tr>
-                                <th></th>
-                                <th>No.</th>
-                                <th>Name</th>
-                                <th>Description</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {filteredteachers.map(teachers => (
-                                <tr className="hover:bg-[rgba(255,255,255,0.1)]" key={teachers.id}>
-                                    <td></td>
-                                    <th>{teachers.id}</th>
-                                    <td>{teachers.title}</td>
-                                    <td>{teachers.description}</td>
-                                    <td>{teachers.status}</td>
-                                    <td>
-                                        <button className="btn btn-soft btn-primary mx-2 my-1">
-                                            <FontAwesomeIcon icon={faEye} /> View
-                                        </button>
-                                        <button className="btn btn-soft btn-success mx-2 my-1">
-                                            <FontAwesomeIcon icon={faPenToSquare} /> Edit
-                                        </button>
-                                        <button className="btn btn-soft btn-warning mx-2 my-1">
-                                            <FontAwesomeIcon icon={faTrashCan} /> Delete
-                                        </button>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+
         </div>
     )
 }

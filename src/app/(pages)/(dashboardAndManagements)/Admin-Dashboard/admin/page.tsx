@@ -38,7 +38,7 @@ export default function AdminDashboardPage() {
                         <div className="xl:w-[100%]">
                             <CountChart />
                         </div>
-                        <div className="xl:w-[185%]">
+                        <div className="xl:w-[208%]">
                             <AttandanceChart />
                         </div>
                     </div>

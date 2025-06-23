@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function LoginPageNavbar() {
     return (
         <div>
-            <ul className="menu menu-horizontal bg-base-200 rounded-box mt-4 gap-4">
+            <ul className="menu menu-horizontal bg-base-200 rounded-box mt-2 gap-4">
                 <li>
                     <div>
                         <Link href={'/'}>

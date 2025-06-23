@@ -23,7 +23,7 @@ export default function TeacherDashboardPage() {
             {/* userCards, Rightside bar */}
             {/* ---------------------------------------------------------------------------- */}
             <div className="backdrop-blur-sm bg-black/10 rounded-2xl shadow-lg">
-                <div className="flex rounded-2xl p-5 gap-5">
+                <div className="flex rounded-2xl p-3.5 gap-5">
                     {/* user Card */}
                     <div className="flex flex-col w-[100%] md:w-[160%] lg:w-[120%] xl:w-[75%] gap-5">
                         {/* charts */}
@@ -38,11 +38,14 @@ export default function TeacherDashboardPage() {
                             <div className="xl:w-[205%]">
                                 <AttandanceChart />
                             </div>
+                            <div className="block sm:hidden">
+                                <AnnouncementsCard urlData={LocalTeachersAnnouncementUrl} />
+                            </div>
                         </div>
                     </div>
 
                     {/* announcement, Event  */}
-                    <div className="flex flex-col w-[0%] md:w-[60%] lg:w-[60%] xl:w-[25%] gap-5">
+                    <div className="flex flex-col md:w-[60%] lg:w-[60%] xl:w-[25%] gap-5">
                         <div className="hidden md:block">
                             <EventCalendar />
                         </div>

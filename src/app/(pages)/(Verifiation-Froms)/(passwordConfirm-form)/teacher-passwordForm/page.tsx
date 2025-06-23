@@ -1,6 +1,7 @@
 
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
@@ -31,33 +32,49 @@ export default function TeacherPasswordForm() {
 
 
     return (
-        <div className="flex flex-col items-center justify-center gap-5">
+        <div className="flex flex-col justify-center items-center p-5 gap-5">
+
             <ul className="steps">
                 <li className="step step-primary">Email Verify</li>
                 <li className="step step-primary">OTP Verify</li>
                 <li className="step step-primary">Set password</li>
             </ul>
-            <div className="backdrop-blur-xl rounded-box hover:shadow-md shadow-sky-400">
-                {/* passwordfiled form */}
-                <fieldset className="fieldset p-5 w-70">
-                    <h1 className="text-2xl">Set Password</h1>
 
-                    <label className="label mt-5">Enter Password</label>
-                    <input type="password" className="input validator bg-black/10" required placeholder="Password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <progress className="progress progress-primary" value={progressOne} max="100"></progress>
-                
-                    <label className="label">Confirm Password</label>
-                    <input type="password" className="input validator bg-black/10" required placeholder="Password" 
-                        value={confirmPassword}
-                        onChange={(e) => setConfirmPassword(e.target.value)}
-                    />
-                    <progress className="progress progress-primary" value={progressTwo} max="100"></progress>
-                
-                    <Link href={"/teacher-login"} className="btn btn-ghost btn-outline mt-5 mb-5 hover:shadow-md shadow-green-500">Submit</Link>
-                </fieldset>
+            <div className="flex p-5 rounded-box hover:shadow-md shadow-sky-400 gap-4">
+                {/* image */}
+                <div className="hidden md:block">
+                    <div className="flex items-center justify-center rounded-2xl p-5 mt-4">
+                        <Image
+                            src={"/images/register_page01.png"}
+                            alt="teacher-email-form"
+                            width={300}
+                            height={300}
+                        />
+                    </div>
+                </div>
+
+                <div className="flex items-center justify-center m-5 ml-5 mr-5">
+                    {/* passwordfiled form */}
+                    <fieldset className="fieldset mt-2">
+                        <h1 className="text-2xl">Set Password</h1>
+
+                        <label className="label mt-5">Enter Password</label>
+                        <input type="password" className="input validator bg-black/10" required placeholder="Password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                        <progress className="progress progress-primary" value={progressOne} max="100"></progress>
+
+                        <label className="label">Confirm Password</label>
+                        <input type="password" className="input validator bg-black/10" required placeholder="Password"
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
+                        />
+                        <progress className="progress progress-primary" value={progressTwo} max="100"></progress>
+
+                        <Link href={"/teacher-login"} className="btn btn-ghost btn-outline mt-5 mb-5 hover:shadow-md shadow-green-500">Submit</Link>
+                    </fieldset>
+                </div>
             </div>
         </div>
     )

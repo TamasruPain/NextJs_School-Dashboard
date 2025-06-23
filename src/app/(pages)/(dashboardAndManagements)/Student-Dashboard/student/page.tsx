@@ -32,6 +32,9 @@ export default function StudnetDashboardPage() {
                             <ClassesCard urlData={LocalStudentsClassesUrl} />
                             <AssignmentsCard urlData={LocalStudentsAssignmentsUrl} />
                             <LessonsCard urlData={LocalStudentsLessonsUrl} />
+                            <div className="block sm:hidden">
+                                <AnnouncementsCard urlData={LocalStudentsAnnouncementUrl} />
+                            </div>
                         </div>
                     </div>
 

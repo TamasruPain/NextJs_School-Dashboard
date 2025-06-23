@@ -52,13 +52,13 @@ export default function ManageMessages() {
                             Clear
                         </button>
                     </div>
-                    <h1 className="text-lg">
+                    <h1 className="text-lg mt-4 hidden md:block">
                         Messages ( {messages.length} )
                     </h1>
                 </div>
 
                 {/* Message List */}
-                <div className="p-6 mt-4 rounded-xl backdrop-blur-sm bg-black/10">
+                <div className="p-3 mt-4 rounded-xl backdrop-blur-sm bg-black/10">
                     <div className="flex flex-col gap-4 h-screen overflow-scroll ">
                         {filteredMassages.map(e => (
                             <div className="bg-base-100 p-3 card hover:shadow shadow-blue-500" key={e.id}>

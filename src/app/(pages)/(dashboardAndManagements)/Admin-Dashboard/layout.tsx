@@ -5,8 +5,8 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import type { Metadata } from "next";
 import AdminSideNavbar from "@/components/sideNavBar/AdminSideNavbar";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 config.autoAddCss = false
 
@@ -30,7 +30,7 @@ export default function RootLayout({
                 {/* Right side */}
                 <div className="flex flex-col w-[85%] sm:w-[92%] md:w-[92%] lg:w-[84%] xl:w-[88%]"
                     style={{
-                        backgroundImage: "url('/images/birds02.png')",
+                        backgroundImage: "url('/images/blackboard01.png')",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                     }}

@@ -33,13 +33,13 @@ export default function ManageAnnoucements() {
 
     return (
         <div className="">
-            <div className="p-2 m-3">
+            <div className="m-4">
                 <h1 className="text-2xl p-2">
                     <FontAwesomeIcon icon={faBullhorn} /> Management Announcments
                 </h1>
                 <div className="">
                     {/* search bar */}
-                    <div className="flex items-center justify-center mt-2 gap-3">
+                    <div className="flex items-center justify-center gap-3">
                         <input
                             type="search"
                             className="input placeholder:text-gray-400 hover:shadow-md shadow-sky-400 w-64 p-2 rounded"
@@ -54,64 +54,64 @@ export default function ManageAnnoucements() {
                             Clear
                         </button>
                     </div>
-                    {/* add button */}
-                    <div className="flex items-center justify-between mt-2">
-                        <h1 className="text-lg ml-1">Announcements ( {annoucements.length} )</h1>
-                        <a href="#my_modal_8" className="btn btn-soft mr-3">
-                            <FontAwesomeIcon icon={faSquarePlus} /> Add Announcment
+                    <div className="flex items-center justify-between mt-4">
+                        <h1 className="text-lg hidden md:block">Announcements ( {annoucements.length} )</h1>
+                        {/* add button */}
+                        <a href="#my_modal_8" className="btn btn-soft ml-5">
+                            <FontAwesomeIcon icon={faSquarePlus} /> Add new Announcment
                         </a>
-                        <div className="modal" role="dialog" id="my_modal_8">
-                            <div className="modal-box">
-                                <div className="modal-action mt-1">
-                                    <a href="#" className="btn">close</a>
-                                </div>
-                                <h3 className="text-lg font-bold">Hello!</h3>
-                                <div className="">
-                                    <fieldset className="fieldset p-4">
-
-                                        <label className="label">Title</label>
-                                        <input type="text" className="input w-full" placeholder="My awesome page" />
-
-                                        <label className="label">Slug</label>
-                                        <input type="text" className="input w-full" placeholder="my-awesome-page" />
-
-                                        <label className="label">Author</label>
-                                        <input type="text" className="input w-full" placeholder="Name" />
-
-                                        <button className="btn btn-neutral mt-10">Submit</button>
-
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
-            </div>
 
-            {/* list of announcement */}
-            <div className="p-4 mt-4">
-                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 p-4 h-screen overflow-scroll rounded-xl
-                 backdrop-blur-md bg-black/10">
-                    {filteredAnnoucement.map(e => (
-                        <div className="bg-base-100 p-3 card hover:shadow shadow-blue-500" key={e.id}>
-                            <div className="flex items-center justify-between my-1">
-                                <h1 className="text-xl">{e.title}</h1>
-                                <span className="text-gray-600">{e.time}</span>
+                {/* list of announcement */}
+                <div className="mt-4">
+                    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 p-4 h-screen overflow-scroll rounded-xl
+                                     backdrop-blur-md bg-black/10">
+                        {filteredAnnoucement.map(e => (
+                            <div className="bg-base-100 p-3 card hover:shadow shadow-blue-500" key={e.id}>
+                                <div className="flex items-center justify-between my-1">
+                                    <h1 className="text-xl">{e.title}</h1>
+                                    <span className="text-gray-600">{e.time}</span>
+                                </div>
+                                <p className="">{e.description}</p>
+                                <div className="flex items-end justify-end">
+                                    <button className="btn btn-soft btn-primary mx-2 my-1">
+                                        <FontAwesomeIcon icon={faEye} />
+                                    </button>
+                                    <button className="btn btn-soft btn-success mx-2 my-1">
+                                        <FontAwesomeIcon icon={faPenToSquare} />
+                                    </button>
+                                    <button className="btn btn-soft btn-warning mx-2 my-1">
+                                        <FontAwesomeIcon icon={faTrashCan} />
+                                    </button>
+                                </div>
                             </div>
-                            <p className="">{e.description}</p>
-                            <div className="flex items-end justify-end">
-                                <button className="btn btn-soft btn-primary mx-2 my-1">
-                                    <FontAwesomeIcon icon={faEye} />
-                                </button>
-                                <button className="btn btn-soft btn-success mx-2 my-1">
-                                    <FontAwesomeIcon icon={faPenToSquare} />
-                                </button>
-                                <button className="btn btn-soft btn-warning mx-2 my-1">
-                                    <FontAwesomeIcon icon={faTrashCan} />
-                                </button>
-                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="modal" role="dialog" id="my_modal_3">
+                    <div className="modal-box">
+                        <div className="modal-action mt-1">
+                            <a href="#" className="btn">close</a>
                         </div>
-                    ))}
+                        <h3 className="text-lg font-bold">add annoucements!</h3>
+                        <div className="">
+                            <fieldset className="fieldset p-4">
+
+                                <label className="label">Title</label>
+                                <input type="text" className="input w-full" placeholder="My awesome page" />
+
+                                <label className="label">Slug</label>
+                                <input type="text" className="input w-full" placeholder="my-awesome-page" />
+
+                                <label className="label">Author</label>
+                                <input type="text" className="input w-full" placeholder="Name" />
+
+                                <button className="btn btn-neutral mt-10">Submit</button>
+
+                            </fieldset>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

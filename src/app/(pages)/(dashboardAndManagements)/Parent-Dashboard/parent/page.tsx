@@ -27,17 +27,27 @@ export default function ParentDashboardPage() {
                 <div className="flex rounded-2xl gap-2 ">
 
                     <div className="w-[100%] sm:w-[100%] md:w-[65%] lg:w-[75%] xl:w-[75%]">
-                        {/* charts */}
-                        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 
+                        {/* chart and cards */}
+                        <div className="flex flex-col">
+                            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 
+                                        gap-5 m-2.5">
+                                <CountChart />
+                                <div className="w-full xl:w-[205%]">
+                                    <LessonsCard urlData={LocalParentsLessonsUrl} />
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 
                                         gap-5 p-2">
-                            <CountChart />
-                            <LessonsCard urlData={LocalParentsLessonsUrl} />
-                            <ClassesCard urlData={LocalParentsClassesUrl} />
-                            <AssignmentsCard urlData={LocalParentsAssignmentsUrl} />
+                                <ClassesCard urlData={LocalParentsClassesUrl} />
+                                <AssignmentsCard urlData={LocalParentsAssignmentsUrl} />
+                            </div>
+                            <div className="block sm:hidden">
+                                <AnnouncementsCard urlData={LocalParentsAnnouncementUrl} />
+                            </div>
                         </div>
                     </div>
 
-                    {/* calendar, announcement */}
+                    {/* right side componets calendar, announcement */}
                     <div className="flex flex-col w-[0%] sm:w-[0%] md:w-[55%] lg:w-[30%] xl:w-[30%]  gap-5 m-2">
                         <div className="hidden md:block">
                             <EventCalendar />

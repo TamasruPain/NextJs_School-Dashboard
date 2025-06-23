@@ -27,13 +27,13 @@ export default function ManageMessages() {
 
     return (
         <div className="">
-            <div className="p-2 m-3">
+            <div className="m-4">
                 <h1 className="text-2xl p-2">
                     <FontAwesomeIcon icon={faCommentDots} /> Manage Messages
                 </h1>
-                <div className="">
+                <div className="p-2">
                     {/* search bar */}
-                    <div className="flex items-center justify-center mt-2 gap-3">
+                    <div className="flex items-center justify-center gap-3">
                         <input
                             type="search"
                             className="input placeholder:text-gray-400 hover:shadow-md shadow-sky-400 w-64 p-2 rounded"
@@ -48,13 +48,13 @@ export default function ManageMessages() {
                             Clear
                         </button>
                     </div>
-                    <h1 className="text-lg">
+                    <h1 className="text-lg mt-2 hidden md:block">
                         Messages ( {messages.length} )
                     </h1>
                 </div>
 
                 {/* Message List */}
-                <div className="p-2 mt-4">
+                <div className="mt-4">
                     <div className="flex flex-col gap-4 h-screen overflow-scroll rounded-xl backdrop-blur-xl p-4">
                         {filteredMassages.map(e => (
                             <div className="bg-base-300 p-3 card hover:shadow shadow-blue-500" key={e.id}>

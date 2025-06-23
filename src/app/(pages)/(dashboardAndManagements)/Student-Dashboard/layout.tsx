@@ -4,8 +4,8 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import type { Metadata } from "next";
 import StudentSideNavbar from "@/components/sideNavBar/StudentSideNavbar";
 import { ReactNode } from "react";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 config.autoAddCss = false
 
@@ -23,12 +23,12 @@ export default function RootLayout({
             <Navbar />
             <div className="flex">
                 {/* left side */}
-                <div className="w-[15%] sm:w-[8%] md:w-[8%] lg:w-[16%] xl:w-[14%] bg-base-200 p-2">
+                <div className="w-[15%] sm:w-[8%] md:w-[8%] lg:w-[16%] xl:w-[12%] bg-base-200 p-2">
                     <StudentSideNavbar />
                 </div>
-                  <div className="flex flex-col w-[85%] sm:w-[92%] md:w-[92%] lg:w-[84%] xl:w-[86%]"
+                <div className="flex flex-col w-[85%] sm:w-[92%] md:w-[92%] lg:w-[84%] xl:w-[88%]"
                     style={{
-                        backgroundImage: "url('/images/birds02.png')",
+                        backgroundImage: "url('/images/blackboard01.png')",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                     }}

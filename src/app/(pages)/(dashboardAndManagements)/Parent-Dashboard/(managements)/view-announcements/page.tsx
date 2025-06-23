@@ -1,6 +1,6 @@
 
 "use client"
-import { faBullhorn, faEye} from "@fortawesome/free-solid-svg-icons"
+import { faBullhorn, faEye } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useState } from "react"
 
@@ -27,14 +27,14 @@ export default function ViewAnnoucements() {
 
     return (
         <div className="">
-            <div className="p-2 m-3">
+            <div className="m-4">
                 <h1 className="text-2xl p-2">
-                    <FontAwesomeIcon icon={faBullhorn} /> Announcments 
+                    <FontAwesomeIcon icon={faBullhorn} /> Announcments
                 </h1>
 
                 <div className="">
                     {/* search bar */}
-                    <div className="flex items-center justify-center mt-2 gap-3">
+                    <div className="flex items-center justify-center gap-3">
                         <input
                             type="search"
                             className="input placeholder:text-gray-400 hover:shadow-md shadow-sky-400 w-64 p-2 rounded"
@@ -52,7 +52,7 @@ export default function ViewAnnoucements() {
                 </div>
             </div>
 
-            <div className="p-4 mt-4 ">
+            <div className="p-2 mt-4 ">
                 <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 h-screen overflow-scroll rounded-xl backdrop-blur-lg p-5">
                     {filteredAnnoucement.map(e => (
                         <div className="bg-base-300 p-3 card hover:shadow shadow-blue-500" key={e.id}>
@@ -65,18 +65,19 @@ export default function ViewAnnoucements() {
                                 <a href="#my_modal_8" className="btn btn-soft btn-primary mx-2 my-1">
                                     <FontAwesomeIcon icon={faEye} /> View
                                 </a>
-                                <div className="modal" role="dialog" id="my_modal_8">
-                                    <div className="modal-box">
-                                        <h3 className="font-bold text-lg">Hello!</h3>
-                                        <p className="py-4">Press ESC key or click the button below to close</p>
-                                        <div className="modal-action">
-                                            <a href="#" className="btn">Close!</a>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     ))}
+                </div>
+            </div>
+            <div className="modal" role="dialog" id="my_modal_8">
+                <div className="modal-box">
+                    <h3 className="font-bold text-lg">Hello!</h3>
+                    <p className="py-4">Press ESC key or click the button below to close</p>
+                    <div className="modal-action">
+                        <a href="#" className="btn">Close!</a>
+                    </div>
                 </div>
             </div>
         </div>

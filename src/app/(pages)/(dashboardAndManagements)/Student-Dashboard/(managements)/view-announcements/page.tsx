@@ -27,14 +27,14 @@ export default function ViewAnnoucements() {
 
     return (
         <div className="">
-            <div className="p-2 m-3">
+            <div className="m-4">
                 <h1 className="text-2xl p-2">
                     <FontAwesomeIcon icon={faBullhorn} /> Announcment Management
                 </h1>
 
                 <div className="">
                     {/* search bar */}
-                    <div className="flex items-center justify-center mt-2 gap-3">
+                    <div className="flex items-center justify-center gap-3">
                         <input
                             type="search"
                             className="input placeholder:text-gray-400 hover:shadow-md shadow-sky-400 w-64 p-2 rounded"

@@ -63,7 +63,52 @@ export default function CountChart() {
                 cursor={false}
                 content={<ChartTooltipContent hideLabel />}
               />
+              {/* sm screen chart */}
               <Pie
+                className="block md:hidden"
+                data={chartData}
+                dataKey="value"
+                nameKey="Students"
+                innerRadius={60}
+                outerRadius={80}
+                stroke="none"
+                cornerRadius={5}
+              >
+                <Label
+                  content={({ viewBox }) => {
+                    if (viewBox && "cx" in viewBox && "cy" in viewBox) {
+                      return (
+                        <text
+                          x={viewBox.cx}
+                          y={viewBox.cy}
+                          textAnchor="middle"
+                          dominantBaseline="middle"
+                          
+                        >
+                          <tspan
+                            x={viewBox.cx}
+                            y={viewBox.cy}
+                            className=" text-3xl font-bold"
+                          >
+                            {totalVisitors.toLocaleString()}
+                          </tspan>
+                          <tspan
+                            x={viewBox.cx}
+                            y={(viewBox.cy || 0) + 24}
+                            className="text-md"
+                          >
+                            Students
+                          </tspan>
+                        </text>
+                      );
+                    }
+                    return null;
+                  }}
+                />
+              </Pie>
+              {/* md and lg screen chart */}
+              <Pie
+                className="hidden md:block"
                 data={chartData}
                 dataKey="value"
                 nameKey="Students"

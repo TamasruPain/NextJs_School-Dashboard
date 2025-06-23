@@ -33,13 +33,13 @@ export default function ManageAnnoucements() {
 
     return (
         <div className="">
-            <div className="p-2 m-3">
+            <div className="m-4">
                 <h1 className="text-2xl p-2">
                     <FontAwesomeIcon icon={faBullhorn} /> Management Announcments
                 </h1>
-                <div className="">
+                <div className="p-2">
                     {/* search bar */}
-                    <div className="flex items-center justify-center mt-2 gap-3">
+                    <div className="flex items-center justify-center gap-3">
                         <input
                             type="search"
                             className="input placeholder:text-gray-400 hover:shadow-md shadow-sky-400 w-64 p-2 rounded"
@@ -55,40 +55,16 @@ export default function ManageAnnoucements() {
                         </button>
                     </div>
                     {/* add button */}
-                    <div className="flex items-center justify-between mt-2">
-                        <h1 className="text-lg">Announcements ( {annoucements.length} )</h1>
-                        <a href="#my_modal_8" className="btn btn-soft">
+                    <div className="flex items-center justify-between p-2 mt-2">
+                        <h1 className="text-lg hidden md:block">Announcements ( {annoucements.length} )</h1>
+                        <a href="#my_modal_8" className="btn btn-soft ml-4">
                             <FontAwesomeIcon icon={faSquarePlus} /> Add Announcment
                         </a>
-                        <div className="modal" role="dialog" id="my_modal_8">
-                            <div className="modal-box">
-                                <div className="modal-action mt-1">
-                                    <a href="#" className="btn">close</a>
-                                </div>
-                                <h3 className="text-lg font-bold">Hello!</h3>
-                                <div className="">
-                                    <fieldset className="fieldset p-4">
-
-                                        <label className="label">Title</label>
-                                        <input type="text" className="input w-full" placeholder="My awesome page" />
-
-                                        <label className="label">Slug</label>
-                                        <input type="text" className="input w-full" placeholder="my-awesome-page" />
-
-                                        <label className="label">Author</label>
-                                        <input type="text" className="input w-full" placeholder="Name" />
-
-                                        <button className="btn btn-neutral mt-10">Submit</button>
-
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 {/* list of announcement */}
-                <div className="p-2 mt-4">
+                <div className="mt-2">
                     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 p-4
                                     backdrop-blur-xl
                                     h-screen overflow-scroll rounded-xl">
@@ -112,6 +88,30 @@ export default function ManageAnnoucements() {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </div>
+            <div className="modal" role="dialog" id="my_modal_8">
+                <div className="modal-box">
+                    <div className="modal-action mt-1">
+                        <a href="#" className="btn">close</a>
+                    </div>
+                    <h3 className="text-lg font-bold">Hello!</h3>
+                    <div className="">
+                        <fieldset className="fieldset p-4">
+
+                            <label className="label">Title</label>
+                            <input type="text" className="input w-full" placeholder="My awesome page" />
+
+                            <label className="label">Slug</label>
+                            <input type="text" className="input w-full" placeholder="my-awesome-page" />
+
+                            <label className="label">Author</label>
+                            <input type="text" className="input w-full" placeholder="Name" />
+
+                            <button className="btn btn-neutral mt-10">Submit</button>
+
+                        </fieldset>
                     </div>
                 </div>
             </div>

@@ -29,13 +29,13 @@ export default function ManageExams() {
 
     return (
         <div className="">
-            <div className="p-2 m-3">
+            <div className="m-4">
                 <h1 className="text-2xl p-2">
                     <FontAwesomeIcon icon={faFilePen} /> Exams Management
                 </h1>
                 <div className="">
                     {/* search bar */}
-                    <div className="flex items-center justify-center mt-2 gap-3">
+                    <div className="flex items-center justify-center gap-3">
                         <input
                             type="search"
                             className="input placeholder:text-gray-400 hover:shadow-md shadow-sky-400 w-64 p-2 rounded"
@@ -51,9 +51,9 @@ export default function ManageExams() {
                         </button>
                     </div>
                     {/* add button */}
-                    <div className="flex items-center justify-between mt-4 ">
-                        <h1 className="text-lg">Exams ( {exams.length} )</h1>
-                        <a href="#my_modal_8" className="btn btn-soft mr-3">
+                    <div className="flex items-center justify-between mt-4 mb-2">
+                        <h1 className="text-lg hidden md:block">Exams ( {exams.length} )</h1>
+                        <a href="#my_modal_8" className="btn btn-soft ml-10">
                             <FontAwesomeIcon icon={faSquarePlus} /> Add new Exam
                         </a>
                         <div className="modal" role="dialog" id="my_modal_8">
@@ -84,7 +84,7 @@ export default function ManageExams() {
                 </div>
 
                 {/* students table */}
-                <div className="m-4 ">
+                <div className="mt-4">
                     <div className="rounded-box h-screen overflow-scroll border border-base-content/5 bg-base-100">
                         <table className="table w-full">
                             {/* head */}

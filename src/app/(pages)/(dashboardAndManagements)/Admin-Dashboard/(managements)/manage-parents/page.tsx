@@ -54,16 +54,16 @@ export default function ManageParents() {
                     </div>
                     {/* add button */}
                     <div className="flex items-center justify-between mt-4 ">
-                        <h1 className="text-lg ml-1">All Parents ( {parents.length} )</h1>
-                        <a href="#my_modal_8" className="btn btn-soft mr-3">
-                            <FontAwesomeIcon icon={faSquarePlus} /> Add a Parent
+                        <h1 className="text-lg ml-1 hidden md:block">All Parents ( {parents.length} )</h1>
+                        <a href="#my_modal_8" className="btn btn-soft ml-10 mr-2">
+                            <FontAwesomeIcon icon={faSquarePlus} /> Register Parent
                         </a>
                         <div className="modal" role="dialog" id="my_modal_8">
                             <div className="modal-box">
                                 <div className="modal-action mt-1">
                                     <a href="#" className="btn">close</a>
                                 </div>
-                                <h3 className="text-lg font-bold">Hello!</h3>
+                                <h3 className="text-lg font-bold">add parent !</h3>
                                 <div className="">
                                     <fieldset className="fieldset p-4">
 

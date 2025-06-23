@@ -54,44 +54,20 @@ export default function ManageStudents() {
                     </div>
 
                     {/* name of each tab group should be unique */}
-                    <div className="tabs tabs-lift">
-                        <input type="radio" name="my_tabs_3" className="tab [--tab-bg:rgba(1,1,1,0.1)]" aria-label="Students" defaultChecked />
-                        <div className="tab-content backdrop-blur-sm bg-black/10 p-4">
+                    <div className="tabs tabs-lift mt-5">
+                        <input type="radio" name="my_tabs_3" className="tab [--tab-bg:rgba(0, 0, 0, 0.1)]" aria-label="Students" defaultChecked />
+                        <div className="tab-content backdrop-blur-sm bg-black/10 border-base-300 p-2">
 
                             {/* add button */}
-                            <div className="flex items-center justify-between mb-2 mr-2">
-                                <h1 className="text-lg ml-1">Students ( {students.length} )</h1>
-                                <a href="#my_modal_8" className="btn btn-soft mr-3">
+                            <div className="flex items-center justify-between m-2 mb-3">
+                                <h1 className="text-lg ml-1 hidden md:block">Students ( {students.length} )</h1>
+                                <a href="#my_modal_2" className="btn btn-soft ml-6 mr-2">
                                     <FontAwesomeIcon icon={faSquarePlus} /> Add New Student
                                 </a>
-                                {/* Put this part before </body> tag */}
-                                <div className="modal" role="dialog" id="my_modal_8">
-                                    <div className="modal-box">
-                                        <div className="modal-action mt-1">
-                                            <a href="#" className="btn">close</a>
-                                        </div>
-                                        <h3 className="text-lg font-bold">Hello!</h3>
-                                        <div className="">
-                                            <fieldset className="fieldset p-4">
 
-                                                <label className="label">Title</label>
-                                                <input type="text" className="input w-full" placeholder="My awesome page" />
-
-                                                <label className="label">Slug</label>
-                                                <input type="text" className="input w-full" placeholder="my-awesome-page" />
-
-                                                <label className="label">Author</label>
-                                                <input type="text" className="input w-full" placeholder="Name" />
-
-                                                <button className="btn btn-neutral mt-10">Submit</button>
-
-                                            </fieldset>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             {/* students table */}
-                            <div className="m-2 ">
+                            <div className="m-2">
                                 <div className="rounded-box h-screen overflow-scroll border border-base-content/5 bg-base-100">
                                     <table className="table w-full">
                                         {/* head */}
@@ -132,8 +108,8 @@ export default function ManageStudents() {
                             </div>
                         </div>
 
-                        <input type="radio" name="my_tabs_3" className="tab [--tab-bg:rgba(1,1,1,0.1)]" aria-label="Applictions" />
-                        <div className="tab-content backdrop-blur-sm bg-black/10 p-4">
+                        <input type="radio" name="my_tabs_3" className="tab [--tab-bg:rgba(0, 0, 0, 0.1)]" aria-label="Applictions" />
+                        <div className="tab-content backdrop-blur-sm bg-black/10 border-base-300 p-4">
 
                             {/* students table */}
                             <div className="m-2">
@@ -180,7 +156,31 @@ export default function ManageStudents() {
                     </div>
                 </div>
             </div>
+            {/* Put this part before </body> tag */}
+            <div className="modal" role="dialog" id="my_modal_2">
+                <div className="modal-box">
+                    <div className="modal-action mt-1">
+                        <a href="#" className="btn">close</a>
+                    </div>
+                    <h3 className="text-lg font-bold">Add Student!</h3>
+                    <div className="">
+                        <fieldset className="fieldset p-4">
 
+                            <label className="label">Title</label>
+                            <input type="text" className="input w-full" placeholder="My awesome page" />
+
+                            <label className="label">Slug</label>
+                            <input type="text" className="input w-full" placeholder="my-awesome-page" />
+
+                            <label className="label">Author</label>
+                            <input type="text" className="input w-full" placeholder="Name" />
+
+                            <button className="btn btn-neutral mt-10">Submit</button>
+
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
 
         </div >
     )

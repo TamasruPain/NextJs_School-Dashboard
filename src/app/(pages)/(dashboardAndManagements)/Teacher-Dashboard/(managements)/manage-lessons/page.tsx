@@ -29,13 +29,13 @@ export default function ManageLessons() {
 
     return (
         <div className="">
-            <div className="p-2 m-3">
+            <div className="m-4">
                 <h1 className="text-2xl p-2">
                     <FontAwesomeIcon icon={faBook} /> Lessons Management
                 </h1>
-                <div className="p-2 ">
+                <div className="p-2">
                     {/* search bar */}
-                    <div className="flex items-center justify-center mt-2 gap-3">
+                    <div className="flex items-center justify-center gap-3">
                         <input
                             type="search"
                             className="input placeholder:text-gray-400 hover:shadow-md shadow-sky-400 w-64 p-2 rounded"
@@ -51,40 +51,17 @@ export default function ManageLessons() {
                         </button>
                     </div>
                     {/* add button */}
-                    <div className="flex items-center justify-between mt-4 ">
-                        <h1 className="text-lg">Lessons ( {lessons.length}  ) </h1>
-                        <a href="#my_modal_8" className="btn btn-soft">
+                    <div className="flex items-center justify-between mt-4 mb-2">
+                        <h1 className="text-lg hidden md:block">Lessons ( {lessons.length}  ) </h1>
+                        <a href="#my_modal_8" className="btn btn-soft ml-8">
                             <FontAwesomeIcon icon={faSquarePlus} /> Add new Lessons
                         </a>
-                        <div className="modal" role="dialog" id="my_modal_8">
-                            <div className="modal-box">
-                                <div className="modal-action mt-1">
-                                    <a href="#" className="btn">close</a>
-                                </div>
-                                <h3 className="text-lg font-bold">Hello!</h3>
-                                <div className="">
-                                    <fieldset className="fieldset p-4">
 
-                                        <label className="label">Title</label>
-                                        <input type="text" className="input w-full" placeholder="My awesome page" />
-
-                                        <label className="label">Slug</label>
-                                        <input type="text" className="input w-full" placeholder="my-awesome-page" />
-
-                                        <label className="label">Author</label>
-                                        <input type="text" className="input w-full" placeholder="Name" />
-
-                                        <button className="btn btn-neutral mt-10">Submit</button>
-
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 {/* Lessons table */}
-                <div className="m-4 ">
+                <div className="mt-2">
                     <div className="rounded-box h-screen overflow-scroll border border-base-content/5 bg-base-100">
                         <table className="table w-full">
                             {/* head */}
@@ -129,6 +106,30 @@ export default function ManageLessons() {
                                 ))}
                             </tbody>
                         </table>
+                    </div>
+                </div>
+            </div>
+            <div className="modal" role="dialog" id="my_modal_8">
+                <div className="modal-box">
+                    <div className="modal-action mt-1">
+                        <a href="#" className="btn">close</a>
+                    </div>
+                    <h3 className="text-lg font-bold">Hello!</h3>
+                    <div className="">
+                        <fieldset className="fieldset p-4">
+
+                            <label className="label">Title</label>
+                            <input type="text" className="input w-full" placeholder="My awesome page" />
+
+                            <label className="label">Slug</label>
+                            <input type="text" className="input w-full" placeholder="my-awesome-page" />
+
+                            <label className="label">Author</label>
+                            <input type="text" className="input w-full" placeholder="Name" />
+
+                            <button className="btn btn-neutral mt-10">Submit</button>
+
+                        </fieldset>
                     </div>
                 </div>
             </div>

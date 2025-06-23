@@ -86,12 +86,12 @@ export default function Navbar() {
                 </ul>
             </div>
             <div className="navbar-end">
-                <div className='mx-2'>
+                <div className='mx-4'>
                     <ThemeControl />
                 </div>
                 {!isLoggedIn ? (
                     <div className="dropdown dropdown-end ">
-                        <div tabIndex={0} role="button" className="btn btn-ghost">Login</div>
+                        <div tabIndex={0} role="button" className="btn btn-ghost hover:shadow-lg shadow-sky-500 mx-2">Login</div>
                         <ul
                             tabIndex={0}
                             className="menu dropdown-content bg-base-200 rounded-box z-1 mt-4 w-34 p-2 shadow-sm">
@@ -106,7 +106,7 @@ export default function Navbar() {
                         <div className="flex gap-1">
 
                             <ProfileCard userData={userData} />
-                            <button className='hidden sm:block btn btn-ghost  hover:shadow-lg shadow-sky-500 '>
+                            <button className='hidden sm:block btn btn-ghost hover:shadow-lg shadow-sky-500'>
                                 <Link href="/" onClick={notify} className=''>
                                     Logout
                                 </Link>

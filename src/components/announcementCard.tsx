@@ -54,17 +54,17 @@ export default function AnnouncementsCard({ urlData }: { urlData: string }) {
             <div className="p-1">
                 <h1>
                     <Link href={urlData}>
-                        <FontAwesomeIcon icon={faBullhorn} /> Announcements
+                        <FontAwesomeIcon icon={faBullhorn} /> Announcement
                     </Link>
                     <Link href={urlData}>
-                        <span className="float-end hidden md:block underline">{">>"}more</span>
+                        <span className="float-end underline">more{">>"}</span>
                     </Link>
                 </h1>
             </div>
 
             <div className="flex flex-col gap-6 mt-2 mb-2 p-2">
                 {events.slice(0, 5).map(events => (
-                    <div className="bg-base-100 p-3 card hover:shadow shadow-blue-500 hidden md:block" key={events.id}>
+                    <div className="bg-base-100 p-3 card hover:shadow shadow-blue-500" key={events.id}>
                         <div className="flex items-center justify-between my-1">
                             <h1>{events.title}</h1>
                             <span className="text-gray-500">{events.time}</span>

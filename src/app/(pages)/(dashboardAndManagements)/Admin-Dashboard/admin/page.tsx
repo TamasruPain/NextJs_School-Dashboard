@@ -42,6 +42,9 @@ export default function AdminDashboardPage() {
                             <AttandanceChart />
                         </div>
                     </div>
+                    <div className="block sm:hidden">
+                        <AnnouncementsCard urlData={LocalAnnouncementUrl} />
+                    </div>
                     <div className="hidden lg:block xl:block ">
                         <TeachersCard urlData={LocalTeacherDataUrl} />
                     </div>
